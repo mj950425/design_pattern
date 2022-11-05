@@ -1,3 +1,5 @@
 public interface State {
-    void process(State state);
+    void publish();
+
+    void setDocument(Document document);
 }
