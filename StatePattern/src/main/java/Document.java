@@ -1,5 +1,3 @@
-import document.State;
-
 public class Document {
     private State state;
 

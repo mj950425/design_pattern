@@ -1,11 +1,15 @@
-import document.State;
-
 public class Draft implements State {
     private Document document;
+
+    public Draft() {
+    }
+
     @Override
     public void publish() {
-        System.out.print("Draft !");
-        document.changeState(new Moderation());
+        System.out.println("Draft !");
+        Moderation moderation = new Moderation();
+        document.changeState(moderation);
+        moderation.setDocument(document);
     }
     @Override
     public void setDocument(Document document) {

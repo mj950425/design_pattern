@@ -1,11 +1,14 @@
-import document.State;
-
 public class Moderation implements State {
     private Document document;
+
+    public Moderation() {
+    }
     @Override
     public void publish() {
-        System.out.print("Moderation !");
-        document.changeState(new Published());
+        System.out.println("Moderation !");
+        Published published = new Published();
+        document.changeState(published);
+        published.setDocument(document);
     }
     @Override
     public void setDocument(Document document) {

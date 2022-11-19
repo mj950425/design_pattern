@@ -1,10 +1,12 @@
-import document.State;
-
 public class Published implements State {
     private Document document;
+
+    public Published() {
+    }
+
     @Override
     public void publish() {
-        System.out.print("Published !");
+        System.out.println("Published !");
     }
     @Override
     public void setDocument(Document document) {
